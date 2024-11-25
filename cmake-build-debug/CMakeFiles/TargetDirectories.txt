@@ -1,0 +1,3 @@
+C:/Users/Kaio/Desktop/Unifagoc/Cpp/TABELA-HASH/cmake-build-debug/CMakeFiles/TABELA_HASH.dir
+C:/Users/Kaio/Desktop/Unifagoc/Cpp/TABELA-HASH/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kaio/Desktop/Unifagoc/Cpp/TABELA-HASH/cmake-build-debug/CMakeFiles/rebuild_cache.dir
