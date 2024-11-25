@@ -16,9 +16,13 @@ public:
     bool isFull() const;
     int getLength() const;
 
-    void retriveItem( Aluno& aluno, bool& found);
-    void insertItem( Aluno aluno);
-    void deleteItem( Aluno aluno);
+    void retriveItemTesteLinear( Aluno& aluno, bool& found);
+    void retriveItemTesteQuadratico(Aluno &aluno, bool &found);
+    void insertItemTesteLinear( Aluno aluno);
+    void insertItemTesteQuadratico(Aluno aluno);
+    void deleteItemTesteLinear( Aluno aluno);
+    void deleteItemTesteQuadratico(Aluno aluno);
+
     void print();
 
 private:
