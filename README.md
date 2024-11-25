@@ -1,4 +1,4 @@
-# Tabela Hash em C++
+# Tabela Hash em cpp
 Uma tabela hash é uma estrutura de dados que associa chaves a valores, permitindo buscas rápidas. Ela utiliza uma função hash para transformar uma chave em um índice de um array, onde o valor associado à chave será armazenado.
 ## Vantagens
 
@@ -36,7 +36,7 @@ A **sondagem quadrática** resolve colisões com um salto crescente, ou seja, ao
 Essas duas técnicas são utilizadas para garantir que as tabelas hash continuem eficientes, mesmo quando ocorrem colisões durante a inserção de dados.
 
 ## Estrutura de uma Tabela Hash
-```c++
+```cpp
   class Hash {
     public:
         Hash(int max_items = 100);
@@ -63,7 +63,7 @@ Essas duas técnicas são utilizadas para garantir que as tabelas hash continuem
 };
 ```
 ## Inserção de Item na Tabela
-```c++
+```cpp
   void Hash::insertItemTesteLinear(Aluno aluno) {
     int location;
     location = getHash(aluno);
@@ -89,7 +89,7 @@ void Hash::insertItemTesteQuadratico(Aluno aluno) {
 }
 ```
 ## Deletar um Item na Tabela
-```c++
+```cpp
   void Hash::deleteItemTesteLinear(Aluno aluno) {
     int locInicial = getHash(aluno);
     bool continuarBuscando = true;
@@ -137,7 +137,7 @@ void Hash::deleteItemTesteQuadratico(Aluno aluno) {
 ```
 
 ## Recuperar um Item da Tabela
-```c++
+```cpp
   void Hash::retriveItemTesteLinear(Aluno &aluno, bool &found) {
     int locInicial = getHash(aluno);
     bool continuarBuscando = true;
