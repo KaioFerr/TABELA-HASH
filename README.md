@@ -15,26 +15,6 @@ Uma tabela hash é uma estrutura de dados que associa chaves a valores, permitin
 4. **Não ordenada**: As tabelas hash não mantêm a ordem dos elementos, o que pode ser uma limitação se for necessário acessar os elementos de forma ordenada.
 5. **Rehashing**: Quando a tabela hash atinge uma carga muito alta, pode ser necessário realizar o rehashing (aumentar o tamanho da tabela e redistribuir os elementos), o que pode ser um processo caro em termos de tempo.
 
-## Colisões em Tabelas Hash
-
-Uma **colisão** ocorre quando duas ou mais chaves diferentes geram o mesmo índice na tabela hash. Para resolver essas colisões, são usadas técnicas de **sondagem**. Duas abordagens comuns são:
-
-### Teste Linear (Linear Probing)
-
-O **teste linear** é uma técnica de sondagem onde, ao ocorrer uma colisão, o próximo índice é verificado sequencialmente até encontrar um índice vazio. O processo continua até encontrar um local disponível ou até percorrer toda a tabela.
-
-- **Vantagem**: Simples de implementar e eficiente quando a tabela está parcialmente cheia.
-- **Desvantagem**: Pode gerar agrupamentos (clustering) de entradas, reduzindo a eficiência.
-
-### Sondagem Quadrática (Quadratic Probing)
-
-A **sondagem quadrática** resolve colisões com um salto crescente, ou seja, ao invés de verificar os próximos índices de forma sequencial, ela verifica índices usando uma função quadrática, como \(h(k) + i^2\), onde \(i\) é o número da tentativa de sondagem.
-
-- **Vantagem**: Reduz o agrupamento (clustering) comparado ao teste linear, distribuindo melhor os elementos.
-- **Desvantagem**: Pode ainda levar a colisões e, em alguns casos, pode ser difícil de implementar corretamente.
-
-Essas duas técnicas são utilizadas para garantir que as tabelas hash continuem eficientes, mesmo quando ocorrem colisões durante a inserção de dados.
-
 ## Estrutura de uma Tabela Hash
 ```cpp
   class Hash {
@@ -62,6 +42,27 @@ Essas duas técnicas são utilizadas para garantir que as tabelas hash continuem
         Aluno* structure;
 };
 ```
+
+## Colisões em Tabelas Hash
+
+Uma **colisão** ocorre quando duas ou mais chaves diferentes geram o mesmo índice na tabela hash. Para resolver essas colisões, são usadas técnicas de **sondagem**. Duas abordagens comuns são:
+
+### Teste Linear (Linear Probing)
+
+O **teste linear** é uma técnica de sondagem onde, ao ocorrer uma colisão, o próximo índice é verificado sequencialmente até encontrar um índice vazio. O processo continua até encontrar um local disponível ou até percorrer toda a tabela.
+
+- **Vantagem**: Simples de implementar e eficiente quando a tabela está parcialmente cheia.
+- **Desvantagem**: Pode gerar agrupamentos (clustering) de entradas, reduzindo a eficiência.
+
+### Sondagem Quadrática (Quadratic Probing)
+
+A **sondagem quadrática** resolve colisões com um salto crescente, ou seja, ao invés de verificar os próximos índices de forma sequencial, ela verifica índices usando uma função quadrática, como \(h(k) + i^2\), onde \(i\) é o número da tentativa de sondagem.
+
+- **Vantagem**: Reduz o agrupamento (clustering) comparado ao teste linear, distribuindo melhor os elementos.
+- **Desvantagem**: Pode ainda levar a colisões e, em alguns casos, pode ser difícil de implementar corretamente.
+
+Essas duas técnicas são utilizadas para garantir que as tabelas hash continuem eficientes, mesmo quando ocorrem colisões durante a inserção de dados.
+
 ## Inserção de Item na Tabela
 ```cpp
   void Hash::insertItemTesteLinear(Aluno aluno) {
